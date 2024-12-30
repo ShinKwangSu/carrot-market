@@ -23,5 +23,5 @@ export default async function ProductDetail({
   if (!product) {
     return notFound();
   }
-  return <div>Product Detail! {id}</div>;
+  return <div>Product Detail!{id}</div>;
 }

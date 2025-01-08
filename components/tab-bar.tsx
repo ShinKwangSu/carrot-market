@@ -18,12 +18,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function TabBar() {
-  const pathName = usePathname();
-
+  const pathname = usePathname();
   return (
-    <div className="fixed bottom-0 w-full mx-auto max-w-screen-md grid grid-cols-5 border-neutral-600 border-t px-5 py-3 *:text-white bg-neutral-800">
-      <Link href="/products" className="flex flex-col items-center gap-px">
-        {pathName === "/products" ? (
+    <div className="fixed bottom-0 w-full mx-auto max-w-screen-sm grid grid-cols-5 border-neutral-600 border-t px-5 py-3 *:text-white bg-neutral-800">
+      <Link href="/home" className="flex flex-col items-center gap-px">
+        {pathname === "/home" ? (
           <SolidHomeIcon className="w-7 h-7" />
         ) : (
           <OutlineHomeIcon className="w-7 h-7" />
@@ -31,7 +30,7 @@ export default function TabBar() {
         <span>홈</span>
       </Link>
       <Link href="/life" className="flex flex-col items-center gap-px">
-        {pathName === "/life" ? (
+        {pathname === "/life" ? (
           <SolidNewspaperIcon className="w-7 h-7" />
         ) : (
           <OutlineNewspaperIcon className="w-7 h-7" />
@@ -39,7 +38,7 @@ export default function TabBar() {
         <span>동네생활</span>
       </Link>
       <Link href="/chat" className="flex flex-col items-center gap-px">
-        {pathName === "/chat" ? (
+        {pathname === "/chat" ? (
           <SolidChatIcon className="w-7 h-7" />
         ) : (
           <OutlineChatIcon className="w-7 h-7" />
@@ -47,7 +46,7 @@ export default function TabBar() {
         <span>채팅</span>
       </Link>
       <Link href="/live" className="flex flex-col items-center gap-px">
-        {pathName === "/live" ? (
+        {pathname === "/live" ? (
           <SolidVideoCameraIcon className="w-7 h-7" />
         ) : (
           <OutlineVideoCameraIcon className="w-7 h-7" />
@@ -55,7 +54,7 @@ export default function TabBar() {
         <span>쇼핑</span>
       </Link>
       <Link href="/profile" className="flex flex-col items-center gap-px">
-        {pathName === "/profile" ? (
+        {pathname === "/profile" ? (
           <SolidUserIcon className="w-7 h-7" />
         ) : (
           <OutlineUserIcon className="w-7 h-7" />

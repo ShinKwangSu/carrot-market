@@ -110,6 +110,12 @@ export default async function ProductDetail({
         <p>{product.description}</p>
       </div>
       <div className="fixed w-full bottom-0 left-0 p-5 pb-10 bg-neutral-800 flex justify-between items-center">
+        <Link
+          className="px-5 py-2.5 rounded-md text-orange-500 font-semibold"
+          href={"/home"}
+        >
+          홈으로
+        </Link>
         <span className="font-semibold text-xl">
           {formatToWon(product.price)}원
         </span>
